@@ -1,0 +1,22 @@
+[profile.default]
+src = 'src'
+out = 'out'
+libs = ['lib']
+optimizer = true
+optimizer_runs = 800
+
+fs_permissions = [{ access = "read", path = "./"}]
+
+[rpc_endpoints]
+avalanche = "https://api.avax.network/ext/bc/C/rpc"
+arbitrum_one = "https://arb1.arbitrum.io/rpc"
+fantom = "https://rpc.fantom.network"
+
+[etherscan]
+arbitrum_one = { url = "https://api.arbiscan.io/api", key = "${ARBISCAN_KEY}", chain = "arbitrum" }
+fantom = { url = "https://api.ftmscan.com/api", key = "${FTMSCAN_KEY}", chain = "fantom" }
+
+[fmt]
+number_underscore = "thousands"
+
+# See more config options https://github.com/foundry-rs/foundry/tree/master/config
